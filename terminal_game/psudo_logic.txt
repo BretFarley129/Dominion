@@ -1,0 +1,69 @@
+function game(){
+    setup_game(){
+        set_players(){
+            -input number players
+            -set player names
+            -determine turn order
+        }
+        set_kingdom_cards(){
+            -pick 10 cards
+            -populate kingdom with cards
+            -populate kingom with base cards
+        }
+    }
+    play_game(){
+        for all players{
+            -generate deck
+            -shuffle deck
+            -draw(5)
+        }
+        while(game_on){
+            current_player.turn(){
+                -set current_player actions and buys to 1
+                -resolve duration cards
+                action_phase{
+                    while(current_player.actions){
+                        if(card){
+                            play_action_card()
+                        }
+                        else if(end_action_phase){
+                            current_player.actions = 0
+                        }
+                    }
+                }
+                buy_phase(){
+                    -select treasure cards
+                        -add money to current_player.money
+                    while(current_player.buys){
+                        -select card to buy_phase
+                        -trigger card buy function
+                        *this will usually send card to discard pile but some
+                        cards are gained to the hand or top of the deck*
+                    }
+                }
+                cleanup_phase(){
+                    for cards in play{
+                        if card.duration < 1{
+                            discard(card)
+                        }
+                    }
+                    for cards in hand{
+                        discard(card)
+                    }
+                    current_player.draw(5)
+                    if( end condition met){
+                        game_on = false
+                    }
+                }
+            }
+        }
+    }
+    endgame(){
+        for all players{
+            count victory_points
+        }
+        -determine winner
+        -display message
+        -cool cool
+    }
+}
