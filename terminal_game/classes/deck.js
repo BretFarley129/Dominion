@@ -2,6 +2,7 @@ var Player = require('./player.js');
 var Card = require('./card.js');
 module.exports = class Deck{
     constructor(){
+        this.content = []
         this.reset();
         this.shuffle();
     }
@@ -22,23 +23,23 @@ module.exports = class Deck{
                 suit = "Hearts";
             }
             var value = (i%13)+1
-            this.deck.push(new Card(suit, value))
+            this.content.push(new Card(suit, value))
         }
         return this;
     }
     display(){
-        for(var i = 0; i< this.deck.length; i ++){
-            console.log(this.deck[i].display,'of',this.deck[i].suit)
+        for(var i = 0; i< this.content.length; i ++){
+            console.log(this.content[i].display,'of',this.content[i].suit)
         }
     }
     shuffle(){
-        for (let i = this.deck.length - 1; i > 0; i--) {
+        for (let i = this.content.length - 1; i > 0; i--) {
             let j = Math.floor(Math.random() * (i + 1));
-            [this.deck[i], this.deck[j]] = [this.deck[j], this.deck[i]];
+            [this.content[i], this.content[j]] = [this.content[j], this.content[i]];
         }
     }
     drawFrom(){
-        return this.deck.pop();
+        return this.content.pop();
     }
 }
 
