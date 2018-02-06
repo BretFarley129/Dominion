@@ -262,6 +262,7 @@ module.exports = class Dom_1st extends Card{
             this.id_num = 23
             this.cardName = 'Mine';
             this.types = ['action'];
+            this.cost = 5;
             this.play = function(){
                 console.log('Playing Mine');
                 console.log('You may trash a treasure card from your hand. Gain a treasure card to your hand costing up to (3) more than it');
@@ -271,6 +272,7 @@ module.exports = class Dom_1st extends Card{
             this.id_num = 24
             this.cardName = 'Witch';
             this.types = ['action', 'attack'];
+            this.cost = 5;
             this.draws = 2;
             this.stack = 10;
             this.play = function(){
@@ -282,6 +284,7 @@ module.exports = class Dom_1st extends Card{
             this.id_num = 25
             this.cardName = 'Adventurer';
             this.types = ['action'];
+            this.cost = 6;
             this.play = function(){
                 console.log('Playing Adventurer');
                 console.log('Reveal cards from your deck until you reveal 2 treasure cards. Put them in your hand and discard the rest');

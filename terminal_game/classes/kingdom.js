@@ -15,23 +15,13 @@ module.exports = class Kingdom{
             pile.setPile(new Victory(i));
             this.piles.push(pile);
         }
-<<<<<<< HEAD
-        for (var i = 1; i < 4; i++){
-=======
 
         // Push treasure cards
         for (var i = 1; i < 4; i++) {
->>>>>>> 7ff11b47606cc1e3a9ba60d94e355e873e67ee5f
             var pile = new Deck();
             pile.setPile(new Money(i));
             this.piles.push(pile);
         }
-<<<<<<< HEAD
-        for (var i = 1; i < 11; i++){
-            var pile = new Deck();
-            pile.setPile(new Money(i));
-            this.piles.push(pile);
-=======
 
         // Randomly select 10 kingdom cards, check and prevent duplicates as we go, then push
         var kingdomCount = 0
@@ -63,14 +53,13 @@ module.exports = class Kingdom{
                     this.piles[j] = temp
                 }
             }
->>>>>>> 7ff11b47606cc1e3a9ba60d94e355e873e67ee5f
         }
     }
 
     // Lots of formatting in display function for organized view of the Supply
     // Deck showPile function and Card display function refactored to return a string
     display(){
-        console.log('\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n*------------ Supply ------------*\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n')
+        console.log('\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n*------------ Supply ------------*\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n');
         for ( var i = 0; i < this.piles.length; i++){
             if (i == 0) {
                 console.log('\n*---------- Victory -----------*\n');
@@ -81,14 +70,13 @@ module.exports = class Kingdom{
             }
 
             // Logs a number by each card. Possible future use for user input/card selection?
-            console.log(`${i + 1}. ` + this.piles[i].showPile())
-            ;
+            console.log(`${i + 1}. ` + this.piles[i].showPile());
             if (i != 3 && i != 6 && i != 16) {
                 console.log(`----------------------------`);
             } else {
-                console.log('\n')
+                console.log('\n');
             }
         }
-        console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
     }
 }
