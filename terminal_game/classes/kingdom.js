@@ -78,8 +78,6 @@ module.exports = class Kingdom{
             pile.setPile(new Dominion_1st(selector[i]));
             this.piles.push(pile);
         }
-
-        
     }
 
     // Lots of formatting in display function for organized view of the Supply

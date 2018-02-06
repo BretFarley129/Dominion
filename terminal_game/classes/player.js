@@ -11,6 +11,7 @@ module.exports = class Player{
         this.hand = [];
         this.in_play = [];
         this.discardPile = [];
+        this.next = null;
 
         //player numerical values
         this.points = 0;
@@ -35,6 +36,11 @@ module.exports = class Player{
         this.deck.shuffle();
     }
 
+    //function to set turn order
+    setNext(player){
+        this.next = player
+    }
+
     //normal card game actions
     draw(amt){
         for(var i = 0; i < amt; i++){
@@ -48,12 +54,16 @@ module.exports = class Player{
                 break
             }
             //reshuffle discard into deck
+            //probably want to rework this
             else{
                 while(this.discardPile[0]){
                     this.deck.content.push(this.discardPile.pop());
                     this.deck.shuffle();
                     this.hand.push(this.deck.drawFrom());
                 }
+                // this.deck = this.discardPile;
+                // this.discardPile = [];
+                // this.hand.push(this.deck.drawFrom());
             }
         }
         return this;
@@ -61,7 +71,14 @@ module.exports = class Player{
     displayHand(){
         console.log(`${this.name}'s hand:`)
         for(var i = 0; i < this.hand.length; i++){
-            console.log(`[${i}]: ${this.hand[i].display} of ${this.hand[i].suit}`)
+            console.log(`[${i}]: ${this.hand[i].display()}`);
+        }
+        return this;
+    }
+    displayDeck(){
+        console.log(`${this.name}'s deck:`)
+        for(var i = 0; i < this.deck.content.length; i++){
+            console.log(`[${i}]: ${this.deck.content[i].display()}`);
         }
         return this;
     }
@@ -92,14 +109,20 @@ module.exports = class Player{
         console.log('Hand discarded');
         return this;
     }
-
-    //Dominion specific actions
-    endTurn(){ //this will need some editing in the future in order to incorperate duration cards
-        this.discardHand();
+    discardInPlay(){ // this will need reworking once duration cards are implemented
         while (this.in_play[0]){
-            this.discardPile.push(this.in_play.pop());
+            this.discardPile.push(this.hand.pop());
         }
-        console.log('Cards in play discarded');
+        console.log('Cards in play Discarded');
         return this;
     }
+    cleanup(){
+        this.discardHand();
+        this.discardInPlay();
+        this.draw(5);
+        this.actions = 1;
+        this.buys = 1;
+        return this;
+    }
+
 }

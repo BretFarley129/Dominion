@@ -6,6 +6,11 @@ overall game logic needs a different approach.
 var Player = require('./classes/player.js');
 var Deck = require('./classes/deck.js');
 var Card = require('./classes/card.js');
+var Kingdom = require('./classes/kingdom.js');
+var Game = require('./classes/logic.js');
+var Money = require('./classes/sets/base/money.js');
+var Victory = require('./classes/sets/base/victory.js');
+var Dominion_1st = require('./classes/sets/dominion/1st_edition.js');
 
 const readline = require('readline');
 const terminal = readline.createInterface({
@@ -13,10 +18,15 @@ const terminal = readline.createInterface({
     output: process.stdout
 });
 
+
+
 console.log("Let's start a game");
-var d1 = new Deck;
-var Bret = new Player('Bret', d1);
-Bret.draw(10)
+var game = new Game();
+var dummy = new Player('Bret', game.supply);
+game.setOrder([dummy]);
+dummy.startDeck();
+dummy.draw(5).displayHand();
+game.turn();
 /*  this function currently has an issue where it works properly
     the first time and then proceeds to repeat the answer as many
     times as an input has been put in.
@@ -50,7 +60,7 @@ function playCard(){
     
 }
 
-playCard();
+//playCard();
 console.log('this is here')
 
 
