@@ -2,11 +2,12 @@ var Deck = require('./deck.js');
 var Card = require('./card.js');
 
 module.exports = class Player{
-    constructor(name, deck){
+    constructor(name, supply){
 
         //name and card possessions
         this.name = name;
-        this.deck = deck; //revisit and edit
+        this.supply = supply;
+        this.deck = new Deck();
         this.hand = [];
         this.in_play = [];
         this.discardPile = [];
@@ -16,6 +17,22 @@ module.exports = class Player{
         this.actions = 0;
         this.buys = 0;
         this.turns = 0;
+    }
+
+    //takes the cards out of the supply, assigns an owner to them and puts them in the deck
+    //shuffles 
+    startDeck(){
+        for(var i = 0; i < 7; i++){
+            var temp = this.supply.piles[4].drawFrom()
+            temp.owner = this
+            this.deck.add(temp)
+        }
+        for(var i = 0; i < 3; i++){
+            var temp2 = this.supply.piles[1].drawFrom()
+            temp2.owner = this
+            this.deck.add(temp2)
+        }
+        this.deck.shuffle();
     }
 
     //normal card game actions

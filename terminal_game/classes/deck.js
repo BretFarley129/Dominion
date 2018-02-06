@@ -12,7 +12,7 @@ module.exports = class Deck{
     }
     display(){
         for(var i = 0; i< this.content.length; i ++){
-            this.content[i].display();
+            console.log(this.content[i].display());
             console.log(i+1)
         }
     }
@@ -29,6 +29,9 @@ module.exports = class Deck{
     }
     drawFrom(){
         return this.content.pop();
+    }
+    add(card){
+        this.content.push(card)
     }
 }
 

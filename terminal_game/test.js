@@ -23,5 +23,7 @@ for (var i = 1; i <= 25; i ++){
     test3.display();
     test3.play();
 }
-var game = new Kingdom();
-game.display();
+var supply = new Kingdom();
+supply.display();
+var dummy = new Player('Bret', supply);
+dummy.startDeck();
