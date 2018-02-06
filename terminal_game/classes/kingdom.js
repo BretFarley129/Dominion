@@ -16,6 +16,16 @@ module.exports = class Kingdom{
             pile.setPile(new Victory(i));
             this.piles.push(pile);
         }
+        for (var i = 1; i < 4; i++){
+            var pile = new Deck();
+            pile.setPile(new Money(i));
+            this.piles.push(pile);
+        }
+        for (var i = 1; i < 11; i++){
+            var pile = new Deck();
+            pile.setPile(new Money(i));
+            this.piles.push(pile);
+        }
     }
     display(){
         for ( var i = 0; i < this.piles.length; i++){
