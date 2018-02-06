@@ -44,16 +44,24 @@ module.exports = class Player{
     displayHand(){
         console.log(`${this.name}'s hand:`)
         for(var i = 0; i < this.hand.length; i++){
-            console.log(`${this.hand[i].display} of ${this.hand[i].suit}`)
+            console.log(`[${i}]: ${this.hand[i].display} of ${this.hand[i].suit}`)
         }
         return this;
     }
-    discard(card){ //Unvisited. might need rework.
-        if (card < this.hand.length){
-            var dc = this.hand[card];
-            console.log(`Discarding ${this.hand[card].display} of ${this.hand[card].suit}`);
+    displayHandText(){
+        var output = ''
+        output += `${this.name}'s hand:\n`
+        for(var i = 0; i < this.hand.length; i++){
+            output += `[${i}]: ${this.hand[i].display} of ${this.hand[i].suit}\n`
+        }
+        return output;
+    }
+    discardByIndex(index){ //Unvisited. might need rework.
+        if (index < this.hand.length){
+            var dc = this.hand[index];
+            console.log(`Discarding ${this.hand[index].display} of ${this.hand[index].suit}`);
             this.discardPile.push(dc);
-            this.hand.splice(card, 1);
+            this.hand.splice(index, 1);
         }
         else{
             console.log('Invalid hand index. Cannot discard.');
