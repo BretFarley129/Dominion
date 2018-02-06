@@ -16,9 +16,10 @@ module.exports = class Deck{
             console.log(i+1)
         }
     }
+
+    // showPile now returns a string to make formatting easier for console output
     showPile(){
-        this.content[0].display();
-        console.log(`${this.content.length} cards`)
+        return this.content[0].display() + `\nThere are ${this.content.length} left`;
     }
     shuffle(){
         for (let i = this.content.length - 1; i > 0; i--) {
@@ -35,6 +36,6 @@ module.exports = class Deck{
 As it stands right now, this current deck setup will not work for Dominion.
 If using this for the kingdom supplies:
     -initialize_supply(card){
-        
+
     }
 ---------------------------------------------------------------------------*/

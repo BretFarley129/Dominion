@@ -1,0 +1,293 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'require-dir' ]
+2 info using npm@4.0.5
+3 info using node@v7.4.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData require-dir
+8 silly fetchNamedPackageData require-dir
+9 silly mapToRegistry name require-dir
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'require-dir',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'require-dir',
+12 silly mapToRegistry   name: 'require-dir',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/require-dir
+14 verbose request uri https://registry.npmjs.org/require-dir
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 5:21:15 PM
+17 verbose request id 8b33e7f473653e27
+18 verbose etag "5a0e0069-2b2b"
+19 verbose lastModified Thu, 16 Nov 2017 21:17:29 GMT
+20 http request GET https://registry.npmjs.org/require-dir
+21 http 304 https://registry.npmjs.org/require-dir
+22 verbose headers { date: 'Wed, 17 Jan 2018 01:21:15 GMT',
+22 verbose headers   via: '1.1 varnish',
+22 verbose headers   'cache-control': 'max-age=300',
+22 verbose headers   etag: '"5a0e0069-2b2b"',
+22 verbose headers   age: '10793',
+22 verbose headers   connection: 'keep-alive',
+22 verbose headers   'x-served-by': 'cache-pao17436-PAO',
+22 verbose headers   'x-cache': 'HIT',
+22 verbose headers   'x-cache-hits': '4',
+22 verbose headers   'x-timer': 'S1516152076.909238,VS0,VE0',
+22 verbose headers   vary: 'Accept-Encoding, Accept' }
+23 silly get cb [ 304,
+23 silly get   { date: 'Wed, 17 Jan 2018 01:21:15 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     'cache-control': 'max-age=300',
+23 silly get     etag: '"5a0e0069-2b2b"',
+23 silly get     age: '10793',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-pao17436-PAO',
+23 silly get     'x-cache': 'HIT',
+23 silly get     'x-cache-hits': '4',
+23 silly get     'x-timer': 'S1516152076.909238,VS0,VE0',
+23 silly get     vary: 'Accept-Encoding, Accept' } ]
+24 verbose etag https://registry.npmjs.org/require-dir from cache
+25 verbose get saving require-dir to C:\Users\jsali\AppData\Roaming\npm-cache\registry.npmjs.org\require-dir\.cache.json
+26 verbose correctMkdir C:\Users\jsali\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+27 silly install normalizeTree
+28 silly loadCurrentTree Finishing
+29 silly loadIdealTree Starting
+30 silly install loadIdealTree
+31 silly cloneCurrentTree Starting
+32 silly install cloneCurrentTreeToIdealTree
+33 silly cloneCurrentTree Finishing
+34 silly loadShrinkwrap Starting
+35 silly install loadShrinkwrap
+36 silly loadShrinkwrap Finishing
+37 silly loadAllDepsIntoIdealTree Starting
+38 silly install loadAllDepsIntoIdealTree
+39 silly resolveWithNewModule require-dir@0.3.2 checking installable status
+40 silly cache add args [ 'require-dir', null ]
+41 verbose cache add spec require-dir
+42 silly cache add parsed spec Result {
+42 silly cache add   raw: 'require-dir',
+42 silly cache add   scope: null,
+42 silly cache add   escapedName: 'require-dir',
+42 silly cache add   name: 'require-dir',
+42 silly cache add   rawSpec: '',
+42 silly cache add   spec: 'latest',
+42 silly cache add   type: 'tag' }
+43 silly addNamed require-dir@latest
+44 verbose addNamed "latest" is being treated as a dist-tag for require-dir
+45 info addNameTag [ 'require-dir', 'latest' ]
+46 silly mapToRegistry name require-dir
+47 silly mapToRegistry using default registry
+48 silly mapToRegistry registry https://registry.npmjs.org/
+49 silly mapToRegistry data Result {
+49 silly mapToRegistry   raw: 'require-dir',
+49 silly mapToRegistry   scope: null,
+49 silly mapToRegistry   escapedName: 'require-dir',
+49 silly mapToRegistry   name: 'require-dir',
+49 silly mapToRegistry   rawSpec: '',
+49 silly mapToRegistry   spec: 'latest',
+49 silly mapToRegistry   type: 'tag' }
+50 silly mapToRegistry uri https://registry.npmjs.org/require-dir
+51 verbose addNameTag registry:https://registry.npmjs.org/require-dir not in flight; fetching
+52 verbose get https://registry.npmjs.org/require-dir not expired, no request
+53 silly addNameTag next cb for require-dir with tag latest
+54 silly addNamed require-dir@0.3.2
+55 verbose addNamed "0.3.2" is a plain semver version for require-dir
+56 silly mapToRegistry name require-dir
+57 silly mapToRegistry using default registry
+58 silly mapToRegistry registry https://registry.npmjs.org/
+59 silly mapToRegistry data Result {
+59 silly mapToRegistry   raw: 'require-dir',
+59 silly mapToRegistry   scope: null,
+59 silly mapToRegistry   escapedName: 'require-dir',
+59 silly mapToRegistry   name: 'require-dir',
+59 silly mapToRegistry   rawSpec: '',
+59 silly mapToRegistry   spec: 'latest',
+59 silly mapToRegistry   type: 'tag' }
+60 silly mapToRegistry uri https://registry.npmjs.org/require-dir
+61 verbose addRemoteTarball https://registry.npmjs.org/require-dir/-/require-dir-0.3.2.tgz not in flight; adding
+62 verbose addRemoteTarball [ 'https://registry.npmjs.org/require-dir/-/require-dir-0.3.2.tgz',
+62 verbose addRemoteTarball   'c1d5c75e9fbffde9f2e6b33e383db4f594b5a6a9' ]
+63 info retry fetch attempt 1 at 5:21:15 PM
+64 info attempt registry request try #1 at 5:21:15 PM
+65 http fetch GET https://registry.npmjs.org/require-dir/-/require-dir-0.3.2.tgz
+66 http fetch 200 https://registry.npmjs.org/require-dir/-/require-dir-0.3.2.tgz
+67 silly fetchAndShaCheck shasum c1d5c75e9fbffde9f2e6b33e383db4f594b5a6a9
+68 verbose addTmpTarball C:\Users\jsali\AppData\Local\Temp\npm-7660-4b28b547\registry.npmjs.org\require-dir\-\require-dir-0.3.2.tgz not in flight; adding
+69 verbose addTmpTarball already have metadata; skipping unpack for require-dir@0.3.2
+70 verbose correctMkdir C:\Users\jsali\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+71 silly cache afterAdd require-dir@0.3.2
+72 verbose afterAdd C:\Users\jsali\AppData\Roaming\npm-cache\require-dir\0.3.2\package\package.json not in flight; writing
+73 verbose correctMkdir C:\Users\jsali\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+74 verbose afterAdd C:\Users\jsali\AppData\Roaming\npm-cache\require-dir\0.3.2\package\package.json written
+75 silly loadAllDepsIntoIdealTree Finishing
+76 silly loadIdealTree Finishing
+77 silly currentTree Dominion
+77 silly currentTree `-- require-dir@0.3.2
+78 silly idealTree Dominion
+78 silly idealTree `-- require-dir@0.3.2
+79 silly generateActionsToTake Starting
+80 silly install generateActionsToTake
+81 silly generateActionsToTake Finishing
+82 silly diffTrees action count 1
+83 silly diffTrees update require-dir@0.3.2
+84 silly decomposeActions action count 9
+85 silly decomposeActions remove require-dir@0.3.2
+86 silly decomposeActions fetch require-dir@0.3.2
+87 silly decomposeActions extract require-dir@0.3.2
+88 silly decomposeActions test require-dir@0.3.2
+89 silly decomposeActions preinstall require-dir@0.3.2
+90 silly decomposeActions build require-dir@0.3.2
+91 silly decomposeActions install require-dir@0.3.2
+92 silly decomposeActions postinstall require-dir@0.3.2
+93 silly decomposeActions finalize require-dir@0.3.2
+94 silly runTopLevelLifecycles Starting
+95 silly executeActions Starting
+96 silly install executeActions
+97 silly doSerial global-install 0
+98 silly doParallel fetch 1
+99 verbose correctMkdir C:\Users\jsali\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+100 verbose lock using C:\Users\jsali\AppData\Roaming\npm-cache\_locks\staging-1d4f2c347053c700.lock for C:\Users\jsali\Desktop\Dominion\node_modules\.staging
+101 silly doParallel extract 1
+102 silly extract require-dir@0.3.2
+103 verbose unbuild node_modules\.staging\require-dir-9e1b3cff
+104 silly gentlyRm C:\Users\jsali\Desktop\Dominion\node_modules\.staging\require-dir-9e1b3cff is being purged from base C:\Users\jsali\Desktop\Dominion
+105 verbose gentlyRm don't care about contents; nuking C:\Users\jsali\Desktop\Dominion\node_modules\.staging\require-dir-9e1b3cff
+106 verbose tar unpack C:\Users\jsali\AppData\Roaming\npm-cache\require-dir\0.3.2\package.tgz
+107 verbose tar unpacking to C:\Users\jsali\Desktop\Dominion\node_modules\.staging\require-dir-9e1b3cff
+108 silly gentlyRm C:\Users\jsali\Desktop\Dominion\node_modules\.staging\require-dir-9e1b3cff is being purged
+109 verbose gentlyRm don't care about contents; nuking C:\Users\jsali\Desktop\Dominion\node_modules\.staging\require-dir-9e1b3cff
+110 silly gunzTarPerm modes [ '777', '666' ]
+111 silly gunzTarPerm extractEntry package.json
+112 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+113 silly gunzTarPerm extractEntry .npmignore
+114 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+115 silly gunzTarPerm extractEntry README.md
+116 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+117 silly gunzTarPerm extractEntry LICENSE
+118 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+119 silly gunzTarPerm extractEntry index.js
+120 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+121 silly gunzTarPerm extractEntry .travis.yml
+122 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+123 silly gunzTarPerm extractEntry test/camelcase.js
+124 silly gunzTarPerm modified mode [ 'test/camelcase.js', 420, 438 ]
+125 silly gunzTarPerm extractEntry test/duplicates.js
+126 silly gunzTarPerm modified mode [ 'test/duplicates.js', 420, 438 ]
+127 silly gunzTarPerm extractEntry test/index.js
+128 silly gunzTarPerm modified mode [ 'test/index.js', 420, 438 ]
+129 silly gunzTarPerm extractEntry test/recurse.js
+130 silly gunzTarPerm modified mode [ 'test/recurse.js', 420, 438 ]
+131 silly gunzTarPerm extractEntry test/simple.js
+132 silly gunzTarPerm modified mode [ 'test/simple.js', 420, 438 ]
+133 silly gunzTarPerm extractEntry test/camelcase/a_main.js
+134 silly gunzTarPerm modified mode [ 'test/camelcase/a_main.js', 420, 438 ]
+135 silly gunzTarPerm extractEntry test/camelcase/sub-dir/a-sub.js
+136 silly gunzTarPerm modified mode [ 'test/camelcase/sub-dir/a-sub.js', 420, 438 ]
+137 silly gunzTarPerm extractEntry test/duplicates/a.js
+138 silly gunzTarPerm modified mode [ 'test/duplicates/a.js', 420, 438 ]
+139 silly gunzTarPerm extractEntry test/duplicates/d.js
+140 silly gunzTarPerm modified mode [ 'test/duplicates/d.js', 420, 438 ]
+141 silly gunzTarPerm extractEntry test/duplicates/b/1.js
+142 silly gunzTarPerm modified mode [ 'test/duplicates/b/1.js', 420, 438 ]
+143 silly gunzTarPerm extractEntry test/duplicates/b/2.js
+144 silly gunzTarPerm modified mode [ 'test/duplicates/b/2.js', 420, 438 ]
+145 silly gunzTarPerm extractEntry test/duplicates/b/1.txt
+146 silly gunzTarPerm modified mode [ 'test/duplicates/b/1.txt', 420, 438 ]
+147 silly gunzTarPerm extractEntry test/duplicates/b/2.json
+148 silly gunzTarPerm modified mode [ 'test/duplicates/b/2.json', 420, 438 ]
+149 silly gunzTarPerm extractEntry test/duplicates/b.json
+150 silly gunzTarPerm modified mode [ 'test/duplicates/b.json', 420, 438 ]
+151 silly gunzTarPerm extractEntry test/duplicates/c/3.json
+152 silly gunzTarPerm modified mode [ 'test/duplicates/c/3.json', 420, 438 ]
+153 silly gunzTarPerm extractEntry test/duplicates/c.txt
+154 silly gunzTarPerm modified mode [ 'test/duplicates/c.txt', 420, 438 ]
+155 silly gunzTarPerm extractEntry test/duplicates/d.json
+156 silly gunzTarPerm modified mode [ 'test/duplicates/d.json', 420, 438 ]
+157 silly gunzTarPerm extractEntry test/recurse/a.js
+158 silly gunzTarPerm modified mode [ 'test/recurse/a.js', 420, 438 ]
+159 silly gunzTarPerm extractEntry test/recurse/b/1/foo.js
+160 silly gunzTarPerm modified mode [ 'test/recurse/b/1/foo.js', 420, 438 ]
+161 silly gunzTarPerm extractEntry test/recurse/b/1/bar.json
+162 silly gunzTarPerm modified mode [ 'test/recurse/b/1/bar.json', 420, 438 ]
+163 silly gunzTarPerm extractEntry test/recurse/b/2/baz.txt
+164 silly gunzTarPerm modified mode [ 'test/recurse/b/2/baz.txt', 420, 438 ]
+165 silly gunzTarPerm extractEntry test/recurse/c/3.json
+166 silly gunzTarPerm modified mode [ 'test/recurse/c/3.json', 420, 438 ]
+167 silly gunzTarPerm extractEntry test/simple/a.js
+168 silly gunzTarPerm modified mode [ 'test/simple/a.js', 420, 438 ]
+169 silly gunzTarPerm extractEntry test/simple/b.json
+170 silly gunzTarPerm modified mode [ 'test/simple/b.json', 420, 438 ]
+171 silly gunzTarPerm extractEntry test/simple/c.coffee
+172 silly gunzTarPerm modified mode [ 'test/simple/c.coffee', 420, 438 ]
+173 silly gunzTarPerm extractEntry test/simple/d.txt
+174 silly gunzTarPerm modified mode [ 'test/simple/d.txt', 420, 438 ]
+175 silly gunzTarPerm extractEntry test/simple/e.ts
+176 silly gunzTarPerm modified mode [ 'test/simple/e.ts', 420, 438 ]
+177 silly gunzTarPerm extractEntry test/simple/f.d.ts
+178 silly gunzTarPerm modified mode [ 'test/simple/f.d.ts', 420, 438 ]
+179 silly gentlyRm C:\Users\jsali\Desktop\Dominion\node_modules\.staging\require-dir-9e1b3cff\node_modules is being purged
+180 verbose gentlyRm don't care about contents; nuking C:\Users\jsali\Desktop\Dominion\node_modules\.staging\require-dir-9e1b3cff\node_modules
+181 silly doParallel preinstall 1
+182 silly preinstall require-dir@0.3.2
+183 info lifecycle require-dir@0.3.2~preinstall: require-dir@0.3.2
+184 silly lifecycle require-dir@0.3.2~preinstall: no script for preinstall, continuing
+185 silly doReverseSerial remove 1
+186 silly remove C:\Users\jsali\Desktop\Dominion\node_modules\require-dir
+187 verbose unbuild node_modules\require-dir
+188 info lifecycle require-dir@0.3.2~preuninstall: require-dir@0.3.2
+189 silly lifecycle require-dir@0.3.2~preuninstall: no script for preuninstall, continuing
+190 info lifecycle require-dir@0.3.2~uninstall: require-dir@0.3.2
+191 silly lifecycle require-dir@0.3.2~uninstall: no script for uninstall, continuing
+192 verbose unbuild rmStuff require-dir@0.3.2 from C:\Users\jsali\Desktop\Dominion\node_modules
+193 info lifecycle require-dir@0.3.2~postuninstall: require-dir@0.3.2
+194 silly lifecycle require-dir@0.3.2~postuninstall: no script for postuninstall, continuing
+195 silly gentlyRm C:\Users\jsali\Desktop\Dominion\node_modules\require-dir is being purged from base C:\Users\jsali\Desktop\Dominion
+196 verbose gentlyRm don't care about contents; nuking C:\Users\jsali\Desktop\Dominion\node_modules\require-dir
+197 silly vacuum-fs purging C:\Users\jsali\Desktop\Dominion\node_modules\require-dir
+198 silly vacuum-fs quitting because other entries in C:\Users\jsali\Desktop\Dominion\node_modules
+199 verbose unlock done using C:\Users\jsali\AppData\Roaming\npm-cache\_locks\staging-1d4f2c347053c700.lock for C:\Users\jsali\Desktop\Dominion\node_modules\.staging
+200 silly rollbackFailedOptional Starting
+201 silly rollbackFailedOptional Finishing
+202 silly runTopLevelLifecycles Finishing
+203 silly install printInstalled
+204 warn enoent ENOENT: no such file or directory, open 'C:\Users\jsali\Desktop\Dominion\package.json'
+205 verbose enoent ENOENT: no such file or directory, open 'C:\Users\jsali\Desktop\Dominion\package.json'
+205 verbose enoent This is most likely not a problem with npm itself
+205 verbose enoent and is related to npm not being able to find a file.
+206 warn Dominion No description
+207 verbose If you need help, you may report this error at:
+207 verbose     <https://github.com/npm/npm/issues>
+208 warn Dominion No repository field.
+209 verbose If you need help, you may report this error at:
+209 verbose     <https://github.com/npm/npm/issues>
+210 warn Dominion No README data
+211 verbose If you need help, you may report this error at:
+211 verbose     <https://github.com/npm/npm/issues>
+212 warn Dominion No license field.
+213 verbose If you need help, you may report this error at:
+213 verbose     <https://github.com/npm/npm/issues>
+214 verbose stack Error: EPERM: operation not permitted, unlink 'C:\Users\jsali\Desktop\Dominion\node_modules\require-dir'
+215 verbose cwd C:\Users\jsali\Desktop\Dominion
+216 error Windows_NT 10.0.16299
+217 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "require-dir"
+218 error node v7.4.0
+219 error npm  v4.0.5
+220 error path C:\Users\jsali\Desktop\Dominion\node_modules\require-dir
+221 error code EPERM
+222 error errno -4048
+223 error syscall unlink
+224 error Error: EPERM: operation not permitted, unlink 'C:\Users\jsali\Desktop\Dominion\node_modules\require-dir'
+224 error  { Error: EPERM: operation not permitted, unlink 'C:\Users\jsali\Desktop\Dominion\node_modules\require-dir'
+224 error   errno: -4048,
+224 error   code: 'EPERM',
+224 error   syscall: 'unlink',
+224 error   path: 'C:\\Users\\jsali\\Desktop\\Dominion\\node_modules\\require-dir' }
+225 error Please try running this command again as root/Administrator.
+226 verbose exit [ -4048, true ]

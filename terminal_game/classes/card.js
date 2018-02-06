@@ -15,7 +15,14 @@ module.exports = class Card{
         this.stack = stack
         this.id_num = 0;
     }
+
+    // display function now returns a string to make formatting easier for console output
     display(){
+        return `${this.cardName}    (${this.cost})`;
+    }
+
+    // details function provides a more detailed view of the card than display()
+    details(){
         console.log(`--------------------------------`);
         console.log(`${this.cardName}    (${this.cost})`);
         var output = '';
