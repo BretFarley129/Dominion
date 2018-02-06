@@ -22,3 +22,6 @@ for (var i = 1; i <= 25; i ++){
     test3.display();
     test3.play();
 }
+var pile = new Deck();
+pile.setPile(new Money(1));
+pile.display();
