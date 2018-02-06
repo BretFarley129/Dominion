@@ -5,6 +5,7 @@ File to test individual cards and interactions
 var Player = require('./classes/player.js');
 var Deck = require('./classes/deck.js');
 var Card = require('./classes/card.js');
+var Kingdom = require('./classes/kingdom.js');
 var Money = require('./classes/sets/base/money.js');
 var Victory = require('./classes/sets/base/victory.js');
 var Dominion_1st = require('./classes/sets/dominion/1st_edition.js');
@@ -22,6 +23,5 @@ for (var i = 1; i <= 25; i ++){
     test3.display();
     test3.play();
 }
-var pile = new Deck();
-pile.setPile(new Money(1));
-pile.display();
+var game = new Kingdom();
+game.display();

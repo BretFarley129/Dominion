@@ -3,6 +3,7 @@ var Card = require('./card.js');
 module.exports = class Deck{
     constructor(){
         this.content = []
+        return this;
     }
     setPile(card){
         for(var i = 0; i < card.stack; i++){
@@ -14,6 +15,10 @@ module.exports = class Deck{
             this.content[i].display();
             console.log(i+1)
         }
+    }
+    showPile(){
+        this.content[0].display();
+        console.log(`${this.content.length} cards`)
     }
     shuffle(){
         for (let i = this.content.length - 1; i > 0; i--) {
